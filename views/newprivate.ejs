@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #000000;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  opacity: 0.7;
+  margin-top: 100px;
+
+}
+
+body{
+  font-family: Arial;
+  margin: 0;
+  color: black;
+  background-image: url('https://images.unsplash.com/7/tuscany.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80');
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+h2{
+  text-align: center;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="container">
+
+
+  <form action="/privateevents" method="POST">
+    <h2>Create a new Private Event</h2>
+    <div class="row">
+        <div class="col-25">
+          <label for="event">To:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="to" placeholder="Recepeint username">
+        </div>
+      </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="event">Event:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="event" placeholder="You are invited to..">
+    </div>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="col-25">
+      <label for="date">Date: </label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="date" placeholder="Date..">
+    </div>
+</div> 
+
+
+  
+  <div class="row">
+   <div class="row">
+    <div class="col-25">
+      <label for="time">Time: </label>
+    </div>
+     <div class="col-75">
+      <input type="text" id="time" name="time" placeholder="Time..">
+    </div>
+    </div>
+  
+    
+
+      <div class="row">
+    <div class="col-25">
+      <label for="venue">Venue: </label>
+    </div>
+     <div class="col-75">
+      <input type="text" id="venue" name="venue" placeholder="Venue..">
+    </div>
+    </div>
+    
+    
+    
+    
+    <div class="row">
+        <div class="col-25">
+          <label for="image">Image URL: </label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="image" placeholder="Add an Image..">
+        </div>
+        </div>
+  
+  
+  
+  
+        <div class="row">
+    <div class="col-25">
+      <label for="subject">More Details</label>
+    </div>
+
+    <div class="col-75">
+      <textarea id="subject" name="info" placeholder="Write something about the event.." style="height:200px"></textarea>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
+

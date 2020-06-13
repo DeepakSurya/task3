@@ -1,0 +1,109 @@
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body{
+        color: white;
+        text-align: center;
+      background-color: white;
+        background-position: 100%;
+
+    }
+    .button {
+        background-color: #e7e7e7;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+     
+ul {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  width: 20%;
+  background-color:  black;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+
+  text-decoration: none;
+  background-color: black ;
+}
+
+li a.active {
+  background-color:  #eee;
+  color: black;
+}
+
+li a:hover:not(.active) {
+  background-color: #eee;
+  color: black;
+}
+.header {
+  padding: 5px;
+  padding-left: 300px;
+
+  text-align: center;
+  background: #DCDCDC
+;
+  color: black;
+  font-size: 20px;
+}
+.container{
+  padding-top: 100px;
+  padding-left: 280px;
+}
+    </style>
+    </head>
+
+    <body> 
+      <ul>
+      <li><a href="/">Home</a></li>
+
+      <li> <a href="/events/new">Create a Event</a></li>
+      <li>    <a href="/privateevents/new">Create a Private Event</a></li>
+      <li>    <a href="/events">View All Events</a> </li>
+      <li>    <a href="/privateevents">View All Private Events</a> </li>
+      <li>    <a href="/accepted">View All Accepted Events</a> </li>
+      <li>    <a href="/rejected">View All Rejected Events</a> </li>
+      <li>    <a href="/private/accepted">View All Accepted Private Events</a> </li>
+      <li>    <a href="/private/rejected">View All Rejected Private Events</a> </li>
+      <li><a href="/logout">Logout</a></li>
+
+
+
+    </ul>
+
+    <div class="header">
+      <h1>Welome Back <%=username%></h1>
+    </div>
+<div class="container">
+    
+  
+
+</div>
+
+
+</body>
+</html>
+

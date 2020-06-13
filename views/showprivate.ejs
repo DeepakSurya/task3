@@ -1,0 +1,79 @@
+
+
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.button {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+    </style>
+    </head>
+    
+    
+    <body>
+
+      <div class="card">
+        <h4>Created by :<%= event.owner %> </h4>
+      <img src="<%= event.image %>" alt="Event Image" style="width:100%">
+        <h1><b><%= event.event %></b></h1> 
+        <p class="title">Date:<%= event.date %></p>
+        <p class="title">Time:<%= event.time %></p>
+        <p class="title">Venue:<%= event.venue %></p
+        <p class="title">Details:<%=event.info %></p>
+      <a href="/privateevents/<%=event._id%>/accept">  <button class="button">  Accept </button></a>
+        <a href="/privateevents/<%=event._id%>/reject"><button class="button">Reject </button></a>
+
+    
+      
+    
+    </div>
+    
+    
+    </body>
+    </html> 
+    

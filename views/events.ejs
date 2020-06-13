@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+ 
+  margin-top: 100px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+ ul {
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+    <li><a href="/">Home Page</a></li>
+    <li style="float:right"><a href="logout"> Logout</a> </li>
+    <li style="float:right"><a href="/events/new">Create a Event</a></li>
+    <li style="float:right"><a href="/privateevents/new"> Create a Private Event</a> </li>
+
+
+  </ul>
+  <h1 style="text-align:center">Dashboard</h1>
+
+
+  <h1 class="head"></h1>
+  <% events.forEach(function(event){ %>
+<div class="card">
+    <h4>Created by :<%= event.owner %> </h4>
+  <img src="<%= event.image %>" alt="Event Image" style="width:100%">
+    <h1><b><%= event.event %></b></h1> 
+    <p class="title">Date:<%= event.date %></p>
+    <p class="title">Time:<%= event.time %></p>
+    <p class="title">Venue:<%= event.venue %></p
+    <p><% //event.info %></p>
+
+  <p>    <a href="/events/<%=event._id%>"><button>View</button></a></p>
+
+</div>
+<% }) %>
+
+</body>
+</html>
